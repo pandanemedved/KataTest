@@ -34,7 +34,7 @@ public class Util {
 
                 sessionFactory = configuration.buildSessionFactory();
             } catch (Exception e) {
-                e.printStackTrace();
+                throw new RuntimeException("Ошибка при создании SessionFactory", e);
             }
         }
         return sessionFactory;
